@@ -19,7 +19,7 @@ export default function Navbar() {
         <Input
           className="border-0 outline-none"
           type="text"
-          placeholder="Search..."
+          placeholder="Arama..."
         />
       </div>
       <div className="flex items-center space-x-4 justify-end w-full">

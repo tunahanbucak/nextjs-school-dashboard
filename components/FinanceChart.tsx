@@ -14,64 +14,64 @@ import {
 
 const data = [
   {
-    name: "Jan",
-    income: 4000,
-    expense: 2400,
+    name: "Ocak",
+    GELİR: 4000,
+    GİDER: 2400,
   },
   {
-    name: "Feb",
-    income: 3000,
-    expense: 1398,
+    name: "Şubat",
+    GELİR: 3000,
+    GİDER: 1398,
   },
   {
-    name: "Mar",
-    income: 2000,
-    expense: 9800,
+    name: "Mart",
+    GELİR: 2000,
+    GİDER: 9800,
   },
   {
-    name: "Apr",
-    income: 2780,
-    expense: 3908,
+    name: "Nisan",
+    GELİR: 2780,
+    GİDER: 3908,
   },
   {
-    name: "May",
-    income: 1890,
-    expense: 4800,
+    name: "Mayıs",
+    GELİR: 1890,
+    GİDER: 4800,
   },
   {
-    name: "Jun",
-    income: 2390,
-    expense: 4500,
+    name: "Haziran",
+    GELİR: 2390,
+    GİDER: 4500,
   },
   {
-    name: "Jul",
-    income: 3490,
-    expense: 1200,
+    name: "Temmuz",
+    GELİR: 3490,
+    GİDER: 1200,
   },
   {
-    name: "Aug",
-    income: 3490,
-    expense: 7800,
+    name: "Ağustos",
+    GELİR: 3490,
+    GİDER: 7800,
   },
   {
-    name: "Sep",
-    income: 8500,
-    expense: 1300,
+    name: "Eylül",
+    GELİR: 8500,
+    GİDER: 1300,
   },
   {
-    name: "Oct",
-    income: 5600,
-    expense: 4300,
+    name: "Ekim",
+    GELİR: 5600,
+    GİDER: 4300,
   },
   {
-    name: "Nov",
-    income: 3490,
-    expense: 9840,
+    name: "Kasım",
+    GELİR: 3490,
+    GİDER: 9840,
   },
   {
-    name: "Dec",
-    income: 4860,
-    expense: 1230,
+    name: "Aralık",
+    GELİR: 4860,
+    GİDER: 1230,
   },
 ];
 
@@ -79,7 +79,7 @@ export default function FinanceChart() {
   return (
     <div className="bg-white rounded-xl w-full h-full p-4">
       <div className="flex justify-between items-center">
-        <h1 className="text-lg font-semibold">Finance</h1>
+        <h1 className="text-lg font-semibold">Finans</h1>
         <Ellipsis width={20} height={20} />
       </div>
       <ResponsiveContainer width="100%" height="90%">
@@ -115,13 +115,13 @@ export default function FinanceChart() {
           />
           <Line
             type="monotone"
-            dataKey="income"
+            dataKey="GELİR"
             stroke="#C3EBFA"
             strokeWidth={5}
           />
           <Line
             type="monotone"
-            dataKey="expense"
+            dataKey="GİDER"
             stroke="#CFCEFF"
             strokeWidth={5}
           />

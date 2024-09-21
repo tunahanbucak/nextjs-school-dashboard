@@ -16,29 +16,29 @@ import {
 
 const data = [
   {
-    name: "Mon",
-    present: 60,
-    absent: 40,
+    name: "Pazartesi",
+    Mevcut: 60,
+    Eksik: 40,
   },
   {
-    name: "Tue",
-    present: 70,
-    absent: 60,
+    name: "Salı",
+    Mevcut: 70,
+    Eksik: 60,
   },
   {
-    name: "Wed",
-    present: 90,
-    absent: 75,
+    name: "Çarşamba",
+    Mevcut: 90,
+    Eksik: 75,
   },
   {
-    name: "Thu",
-    present: 90,
-    absent: 75,
+    name: "Perşembe",
+    Mevcut: 90,
+    Eksik: 75,
   },
   {
-    name: "Fri",
-    present: 65,
-    absent: 55,
+    name: "Cuma",
+    Mevcut: 65,
+    Eksik: 55,
   },
 ];
 
@@ -46,7 +46,7 @@ export default function AttendanceChart() {
   return (
     <div className="bg-white rounded-lg  h-full p-4">
       <div className="flex justify-between items-center">
-        <h1 className="text-lg font-semibold">Attendance</h1>
+        <h1 className="text-lg font-semibold">Katılım</h1>
         <Ellipsis width={20} height={20} />
       </div>
       <ResponsiveContainer width="100%" height="90%">
@@ -68,13 +68,13 @@ export default function AttendanceChart() {
             wrapperStyle={{ paddingTop: "20px", paddingBottom: "40px" }}
           />
           <Bar
-            dataKey="present"
+            dataKey="Mevcut"
             fill="#FAE27C"
             legendType="circle"
             radius={[10, 10, 0, 0]}
           />
           <Bar
-            dataKey="absent"
+            dataKey="Eksik"
             fill="#C3EBFA"
             legendType="circle"
             radius={[10, 10, 0, 0]}

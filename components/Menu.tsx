@@ -1,14 +1,15 @@
+import { role } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const menuItems = [
   {
-    title: "MENU",
+    title: "MENÜ",
     items: [
       {
         icon: "/home.png",
-        label: "Anasayfa",
+        label: "Ana Sayfa",
         href: "/",
         visible: ["admin", "teacher", "student", "parent"],
       },
@@ -26,13 +27,13 @@ const menuItems = [
       },
       {
         icon: "/parent.png",
-        label: "Ebeveynler",
+        label: "Veliler",
         href: "/list/parents",
         visible: ["admin", "teacher"],
       },
       {
         icon: "/subject.png",
-        label: "Konular",
+        label: "Dersler",
         href: "/list/subjects",
         visible: ["admin"],
       },
@@ -68,7 +69,7 @@ const menuItems = [
       },
       {
         icon: "/attendance.png",
-        label: "Katılım",
+        label: "Yoklama",
         href: "/list/attendance",
         visible: ["admin", "teacher", "student", "parent"],
       },
@@ -126,15 +127,19 @@ export default function Menu() {
             {" "}
             {i.title}{" "}
           </span>
-          {i.items.map((item) => (
-            <Link
-              className="flex items-center justify-center lg:justify-start gap-4 text-gray-500 py-2"
-              href={item.href}
-              key={item.label}>
-              <Image src={item.icon} alt="" width={20} height={20} />
-              <span className="hidden lg:block">{item.label}</span>
-            </Link>
-          ))}
+          {i.items.map((item) => {
+            if (item.visible.includes(role)) {
+              return (
+                <Link
+                  className="flex items-center justify-center lg:justify-start gap-4 text-gray-500 py-2 md:px-2 rounded-md hover:bg-lamaSkyLight"
+                  href={item.href}
+                  key={item.label}>
+                  <Image src={item.icon} alt="" width={20} height={20} />
+                  <span className="hidden lg:block">{item.label}</span>
+                </Link>
+              );
+            }
+          })}
         </div>
       ))}
     </div>

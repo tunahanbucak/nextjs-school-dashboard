@@ -15,63 +15,63 @@ import {
 const data = [
   {
     name: "Ocak",
-    GELİR: 4000,
-    GİDER: 2400,
+    Gelir: 4000,
+    Gider: 2400,
   },
   {
     name: "Şubat",
-    GELİR: 3000,
-    GİDER: 1398,
+    Gelir: 3000,
+    Gider: 1398,
   },
   {
     name: "Mart",
-    GELİR: 2000,
-    GİDER: 9800,
+    Gelir: 2000,
+    Gider: 9800,
   },
   {
     name: "Nisan",
-    GELİR: 2780,
-    GİDER: 3908,
+    Gelir: 2780,
+    Gider: 3908,
   },
   {
     name: "Mayıs",
-    GELİR: 1890,
-    GİDER: 4800,
+    Gelir: 1890,
+    Gider: 4800,
   },
   {
     name: "Haziran",
-    GELİR: 2390,
-    GİDER: 4500,
+    Gelir: 2390,
+    Gider: 4500,
   },
   {
     name: "Temmuz",
-    GELİR: 3490,
-    GİDER: 1200,
+    Gelir: 3490,
+    Gider: 1200,
   },
   {
     name: "Ağustos",
-    GELİR: 3490,
-    GİDER: 7800,
+    Gelir: 3490,
+    Gider: 7800,
   },
   {
     name: "Eylül",
-    GELİR: 8500,
-    GİDER: 1300,
+    Gelir: 8500,
+    Gider: 1300,
   },
   {
     name: "Ekim",
-    GELİR: 5600,
-    GİDER: 4300,
+    Gelir: 5600,
+    Gider: 4300,
   },
   {
     name: "Kasım",
-    GELİR: 3490,
-    GİDER: 9840,
+    Gelir: 3490,
+    Gider: 9840,
   },
   {
     name: "Aralık",
-    GELİR: 4860,
-    GİDER: 1230,
+    Gelir: 4860,
+    Gider: 1230,
   },
 ];
 
@@ -115,13 +115,13 @@ export default function FinanceChart() {
           />
           <Line
             type="monotone"
-            dataKey="GELİR"
+            dataKey="Gelir"
             stroke="#C3EBFA"
             strokeWidth={5}
           />
           <Line
             type="monotone"
-            dataKey="GİDER"
+            dataKey="Gider"
             stroke="#CFCEFF"
             strokeWidth={5}
           />

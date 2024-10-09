@@ -4,6 +4,7 @@ import { Ellipsis } from "lucide-react";
 import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
+import { Button } from "./ui/button";
 
 type ValuePiece = Date | null;
 
@@ -39,10 +40,12 @@ export default function EventCalendar() {
 
   return (
     <div className=" bg-white p-4 rounded-md ">
-      <Calendar onChange={onChange} value={value} />
+      <Calendar onChange={onChange} value={value} locale="tr" />
       <div className="flex items-center justify-between">
         <h1 className="text-xl font-semibold my-4 ">Etkinlikler</h1>
-        <Ellipsis width={20} height={20} />
+        <Button variant="ghost" size="icon">
+          <Ellipsis width={20} height={20} />
+        </Button>
       </div>
       <div className="flex flex-col gap-4">
         {events.map((event) => (

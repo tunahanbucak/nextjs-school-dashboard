@@ -9,9 +9,9 @@ export const teachersData = [
     photo:
       "https://images.pexels.com/photos/2888150/pexels-photo-2888150.jpeg?auto=compress&cs=tinysrgb&w=1200",
     phone: "1234567890",
-    subjects: ["Math", "Geometry"],
+    subjects: ["Matematik", "Geometri"],
     classes: ["1B", "2A", "3C"],
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 2,
@@ -21,9 +21,9 @@ export const teachersData = [
     photo:
       "https://images.pexels.com/photos/936126/pexels-photo-936126.jpeg?auto=compress&cs=tinysrgb&w=1200",
     phone: "1234567890",
-    subjects: ["Physics", "Chemistry"],
+    subjects: ["Fizik", "Kimya"],
     classes: ["5A", "4B", "3C"],
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 3,
@@ -33,9 +33,9 @@ export const teachersData = [
     photo:
       "https://images.pexels.com/photos/428328/pexels-photo-428328.jpeg?auto=compress&cs=tinysrgb&w=1200",
     phone: "1234567890",
-    subjects: ["Biology"],
+    subjects: ["Biyoloji"],
     classes: ["5A", "4B", "3C"],
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 4,
@@ -45,9 +45,9 @@ export const teachersData = [
     photo:
       "https://images.pexels.com/photos/1187765/pexels-photo-1187765.jpeg?auto=compress&cs=tinysrgb&w=1200",
     phone: "1234567890",
-    subjects: ["History"],
+    subjects: ["Tarih"],
     classes: ["5A", "4B", "3C"],
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 5,
@@ -57,9 +57,9 @@ export const teachersData = [
     photo:
       "https://images.pexels.com/photos/1102341/pexels-photo-1102341.jpeg?auto=compress&cs=tinysrgb&w=1200",
     phone: "1234567890",
-    subjects: ["Music", "History"],
+    subjects: ["Müzik", "Tarih"],
     classes: ["5A", "4B", "3C"],
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 6,
@@ -69,9 +69,9 @@ export const teachersData = [
     photo:
       "https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&cs=tinysrgb&w=1200",
     phone: "1234567890",
-    subjects: ["Physics"],
+    subjects: ["Fizik"],
     classes: ["5A", "4B", "3C"],
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 7,
@@ -81,9 +81,9 @@ export const teachersData = [
     photo:
       "https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&w=1200",
     phone: "1234567890",
-    subjects: ["English", "Spanish"],
+    subjects: ["İngilizce", "İspanyolca"],
     classes: ["5A", "4B", "3C"],
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 8,
@@ -93,9 +93,9 @@ export const teachersData = [
     photo:
       "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1200",
     phone: "1234567890",
-    subjects: ["Math", "Geometry"],
+    subjects: ["Matematik", "Geometri"],
     classes: ["5A", "4B", "3C"],
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 9,
@@ -105,9 +105,9 @@ export const teachersData = [
     photo:
       "https://images.pexels.com/photos/842980/pexels-photo-842980.jpeg?auto=compress&cs=tinysrgb&w=1200",
     phone: "1234567890",
-    subjects: ["Literature", "English"],
+    subjects: ["Edebiyat", "İngilizce"],
     classes: ["5A", "4B", "3C"],
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 10,
@@ -117,9 +117,9 @@ export const teachersData = [
     photo:
       "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1200",
     phone: "1234567890",
-    subjects: ["Biology"],
+    subjects: ["Biyoloji"],
     classes: ["5A", "4B", "3C"],
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
 ];
 
@@ -134,7 +134,7 @@ export const studentsData = [
     phone: "1234567890",
     grade: 5,
     class: "1B",
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 2,
@@ -146,7 +146,7 @@ export const studentsData = [
     phone: "1234567890",
     grade: 5,
     class: "5A",
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 3,
@@ -158,7 +158,7 @@ export const studentsData = [
     phone: "1234567890",
     grade: 5,
     class: "5A",
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 4,
@@ -170,7 +170,7 @@ export const studentsData = [
     phone: "1234567890",
     grade: 5,
     class: "5A",
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 5,
@@ -182,7 +182,7 @@ export const studentsData = [
     phone: "1234567890",
     grade: 5,
     class: "5A",
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 6,
@@ -194,7 +194,7 @@ export const studentsData = [
     phone: "1234567890",
     grade: 5,
     class: "5A",
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 7,
@@ -206,7 +206,7 @@ export const studentsData = [
     phone: "1234567890",
     grade: 5,
     class: "5A",
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 8,
@@ -218,7 +218,7 @@ export const studentsData = [
     phone: "1234567890",
     grade: 5,
     class: "5A",
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 9,
@@ -230,7 +230,7 @@ export const studentsData = [
     phone: "1234567890",
     grade: 5,
     class: "5A",
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 10,
@@ -242,7 +242,7 @@ export const studentsData = [
     phone: "1234567890",
     grade: 5,
     class: "5A",
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
 ];
 
@@ -253,7 +253,7 @@ export const parentsData = [
     students: ["Sarah Brewer"],
     email: "john@doe.com",
     phone: "1234567890",
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 2,
@@ -261,7 +261,7 @@ export const parentsData = [
     students: ["Cecilia Bradley"],
     email: "jane@doe.com",
     phone: "1234567890",
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 3,
@@ -269,7 +269,7 @@ export const parentsData = [
     students: ["Fanny Caldwell"],
     email: "mike@geller.com",
     phone: "1234567890",
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 4,
@@ -277,7 +277,7 @@ export const parentsData = [
     students: ["Mollie Fitzgerald", "Ian Bryant"],
     email: "mike@geller.com",
     phone: "1234567890",
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 5,
@@ -285,7 +285,7 @@ export const parentsData = [
     students: ["Mable Harvey"],
     email: "mike@geller.com",
     phone: "1234567890",
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 6,
@@ -293,7 +293,7 @@ export const parentsData = [
     students: ["Joel Lambert"],
     email: "mike@geller.com",
     phone: "1234567890",
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 7,
@@ -301,7 +301,7 @@ export const parentsData = [
     students: ["Carrie Tucker", "Lilly Underwood"],
     email: "mike@geller.com",
     phone: "1234567890",
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 8,
@@ -309,7 +309,7 @@ export const parentsData = [
     students: ["Alexander Blair"],
     email: "mike@geller.com",
     phone: "1234567890",
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 9,
@@ -317,7 +317,7 @@ export const parentsData = [
     students: ["Susan Webster", "Maude Stone"],
     email: "mike@geller.com",
     phone: "1234567890",
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
   {
     id: 10,
@@ -325,39 +325,39 @@ export const parentsData = [
     students: ["Stella Scott"],
     email: "mike@geller.com",
     phone: "1234567890",
-    address: "123 Main St, Anytown, USA",
+    address: "Atatürk Caddesi No: 123, Beşiktaş, İstanbul, Türkiye",
   },
 ];
 
 export const subjectsData = [
   {
     id: 1,
-    name: "Math",
+    name: "Matematik",
     teachers: ["Alice Phelps", "Russell Davidson"],
   },
   {
     id: 2,
-    name: "English",
+    name: "İngilizce",
     teachers: ["Manuel Becker", "Eddie Chavez"],
   },
   {
     id: 3,
-    name: "Physics",
+    name: "Fizik",
     teachers: ["Lola Newman", "Darrell Delgado"],
   },
   {
     id: 4,
-    name: "Chemistry",
+    name: "Kimya",
     teachers: ["Nathan Kelly", "Benjamin Snyder"],
   },
   {
     id: 5,
-    name: "Biology",
+    name: "Biyoloji",
     teachers: ["Alma Benson", "Lina Collier"],
   },
   {
     id: 6,
-    name: "History",
+    name: "Tarih",
     teachers: ["Hannah Bowman", "Betty Obrien"],
   },
   {
@@ -372,12 +372,12 @@ export const subjectsData = [
   },
   {
     id: 9,
-    name: "Music",
+    name: "Müzik",
     teachers: ["Gertrude Roy", "Rosa Singleton"],
   },
   {
     id: 10,
-    name: "Literature",
+    name: "Edebiyat",
     teachers: ["Effie Lynch", "Brett Flowers"],
   },
 ];
@@ -458,13 +458,13 @@ export const classesData = [
 export const lessonsData = [
   {
     id: 1,
-    subject: "Math",
+    subject: "Matematik",
     class: "1A",
     teacher: "Tommy Wise",
   },
   {
     id: 2,
-    subject: "English",
+    subject: "İngilizce",
     class: "2A",
     teacher: "Rhoda Frank",
   },
@@ -488,13 +488,13 @@ export const lessonsData = [
   },
   {
     id: 6,
-    subject: "Music",
+    subject: "Müzik",
     class: "5A",
     teacher: "Bettie Oliver",
   },
   {
     id: 7,
-    subject: "History",
+    subject: "Tarih",
     class: "6A",
     teacher: "Herman Howard",
   },
@@ -506,13 +506,13 @@ export const lessonsData = [
   },
   {
     id: 9,
-    subject: "Physics",
+    subject: "Fizik",
     class: "6C",
     teacher: "Ronald Roberts",
   },
   {
     id: 10,
-    subject: "Chemistry",
+    subject: "Kimya",
     class: "4B",
     teacher: "Julia Pittman",
   },
@@ -521,14 +521,14 @@ export const lessonsData = [
 export const examsData = [
   {
     id: 1,
-    subject: "Math",
+    subject: "Matematik",
     class: "1A",
     teacher: "Martha Morris",
     date: "2025-01-01",
   },
   {
     id: 2,
-    subject: "English",
+    subject: "İngilizce",
     class: "2A",
     teacher: "Randall Garcia",
     date: "2025-01-01",
@@ -556,14 +556,14 @@ export const examsData = [
   },
   {
     id: 6,
-    subject: "Music",
+    subject: "Müzik",
     class: "5A",
     teacher: "Dale Thompson",
     date: "2025-01-01",
   },
   {
     id: 7,
-    subject: "History",
+    subject: "Tarih",
     class: "6A",
     teacher: "Allie Conner",
     date: "2025-01-01",
@@ -577,14 +577,14 @@ export const examsData = [
   },
   {
     id: 9,
-    subject: "Physics",
+    subject: "Fizik",
     class: "7A",
     teacher: "Lois Lindsey",
     date: "2025-01-01",
   },
   {
     id: 10,
-    subject: "Chemistry",
+    subject: "Kimya",
     class: "8A",
     teacher: "Vera Soto",
     date: "2025-01-01",
@@ -594,14 +594,14 @@ export const examsData = [
 export const assignmentsData = [
   {
     id: 1,
-    subject: "Math",
+    subject: "Matematik",
     class: "1A",
     teacher: "Anthony Boone",
     dueDate: "2025-01-01",
   },
   {
     id: 2,
-    subject: "English",
+    subject: "İngilizce",
     class: "2A",
     teacher: "Clifford Bowen",
     dueDate: "2025-01-01",
@@ -629,14 +629,14 @@ export const assignmentsData = [
   },
   {
     id: 6,
-    subject: "Music",
+    subject: "Müzik",
     class: "5A",
     teacher: "Katharine Owens",
     dueDate: "2025-01-01",
   },
   {
     id: 7,
-    subject: "History",
+    subject: "Tarih",
     class: "6A",
     teacher: "Shawn Norman",
     dueDate: "2025-01-01",
@@ -650,14 +650,14 @@ export const assignmentsData = [
   },
   {
     id: 9,
-    subject: "Physics",
+    subject: "Fizik",
     class: "7A",
     teacher: "Franklin Gregory",
     dueDate: "2025-01-01",
   },
   {
     id: 10,
-    subject: "Chemistry",
+    subject: "Kimya",
     class: "8A",
     teacher: "Danny Nguyen",
     dueDate: "2025-01-01",
@@ -667,7 +667,7 @@ export const assignmentsData = [
 export const resultsData = [
   {
     id: 1,
-    subject: "Math",
+    subject: "Matematik",
     class: "1A",
     teacher: "John Doe",
     student: "John Doe",
@@ -677,7 +677,7 @@ export const resultsData = [
   },
   {
     id: 2,
-    subject: "English",
+    subject: "İngilizce",
     class: "2A",
     teacher: "John Doe",
     student: "John Doe",
@@ -717,7 +717,7 @@ export const resultsData = [
   },
   {
     id: 6,
-    subject: "Music",
+    subject: "Müzik",
     class: "5A",
     teacher: "John Doe",
     student: "John Doe",
@@ -727,7 +727,7 @@ export const resultsData = [
   },
   {
     id: 7,
-    subject: "History",
+    subject: "Tarih",
     class: "6A",
     teacher: "John Doe",
     student: "John Doe",
@@ -747,7 +747,7 @@ export const resultsData = [
   },
   {
     id: 9,
-    subject: "Physics",
+    subject: "Fizik",
     class: "7A",
     teacher: "John Doe",
     student: "John Doe",
@@ -757,7 +757,7 @@ export const resultsData = [
   },
   {
     id: 10,
-    subject: "Chemistry",
+    subject: "Kimya",
     class: "8A",
     teacher: "John Doe",
     student: "John Doe",
@@ -802,7 +802,7 @@ export const eventsData = [
   },
   {
     id: 5,
-    title: "Music Concert",
+    title: "Müzik Concert",
     class: "5A",
     date: "2025-01-01",
     startTime: "10:00",
@@ -853,61 +853,61 @@ export const eventsData = [
 export const announcementsData = [
   {
     id: 1,
-    title: "About 4A Math Test",
+    title: "About 4A Matematik Test",
     class: "4A",
     date: "2025-01-01",
   },
   {
     id: 2,
-    title: "About 3A Math Test",
+    title: "About 3A Matematik Test",
     class: "3A",
     date: "2025-01-01",
   },
   {
     id: 3,
-    title: "About 3B Math Test",
+    title: "About 3B Matematik Test",
     class: "3B",
     date: "2025-01-01",
   },
   {
     id: 4,
-    title: "About 6A Math Test",
+    title: "About 6A Matematik Test",
     class: "6A",
     date: "2025-01-01",
   },
   {
     id: 5,
-    title: "About 8C Math Test",
+    title: "About 8C Matematik Test",
     class: "8C",
     date: "2025-01-01",
   },
   {
     id: 6,
-    title: "About 2A Math Test",
+    title: "About 2A Matematik Test",
     class: "2A",
     date: "2025-01-01",
   },
   {
     id: 7,
-    title: "About 4C Math Test",
+    title: "About 4C Matematik Test",
     class: "4C",
     date: "2025-01-01",
   },
   {
     id: 8,
-    title: "About 4B Math Test",
+    title: "About 4B Matematik Test",
     class: "4B",
     date: "2025-01-01",
   },
   {
     id: 9,
-    title: "About 3C Math Test",
+    title: "About 3C Matematik Test",
     class: "3C",
     date: "2025-01-01",
   },
   {
     id: 10,
-    title: "About 1C Math Test",
+    title: "About 1C Matematik Test",
     class: "1C",
     date: "2025-01-01",
   },
@@ -915,143 +915,143 @@ export const announcementsData = [
 
 export const calendarEvents = [
   {
-    title: "Math",
+    title: "Matematik",
+    allDay: false,
+    start: new Date(2024, 9, 12, 11, 0),
+    end: new Date(2024, 9, 12, 12, 0),
+  },
+  {
+    title: "İngilizce",
+    allDay: false,
+    start: new Date(2024, 9, 12, 9, 0),
+    end: new Date(2024, 9, 12, 10, 0),
+  },
+  {
+    title: "Biyoloji",
+    allDay: false,
+    start: new Date(2024, 9, 12, 13, 0),
+    end: new Date(2024, 9, 12, 14, 0),
+  },
+  {
+    title: "Fizik",
+    allDay: false,
+    start: new Date(2024, 9, 12, 15, 0),
+    end: new Date(2024, 9, 12, 16, 0),
+  },
+  {
+    title: "Kimya",
+    allDay: false,
+    start: new Date(2024, 9, 8, 13, 0),
+    end: new Date(2024, 9, 8, 13, 45),
+  },
+  {
+    title: "Tarih",
     allDay: false,
     start: new Date(2024, 9, 8, 11, 0),
-    end: new Date(2024, 9, 8, 12, 0),
+    end: new Date(2024, 9, 8, 11, 45),
   },
   {
-    title: "English",
+    title: "İngilizce",
     allDay: false,
-    start: new Date(2024, 9, 8, 13, 0),
-    end: new Date(2024, 9, 8, 13, 45),
+    start: new Date(2024, 9, 11, 13, 0),
+    end: new Date(2024, 9, 11, 13, 45),
   },
   {
-    title: "Biology",
+    title: "Biyoloji",
     allDay: false,
-    start: new Date(2024, 9, 8, 13, 0),
-    end: new Date(2024, 9, 8, 13, 45),
+    start: new Date(2024, 9, 7, 8, 0),
+    end: new Date(2024, 9, 7, 8, 45),
   },
   {
-    title: "Physics",
-    allDay: false,
-    start: new Date(2024, 9, 1, 11, 0),
-    end: new Date(2024, 9, 1, 11, 45),
-  },
-  {
-    title: "Chemistry",
-    allDay: false,
-    start: new Date(2024, 9, 8, 13, 0),
-    end: new Date(2024, 9, 8, 13, 45),
-  },
-  {
-    title: "History",
-    allDay: false,
-    start: new Date(2024, 7, 12, 14, 0),
-    end: new Date(2024, 7, 12, 14, 45),
-  },
-  {
-    title: "English",
-    allDay: false,
-    start: new Date(2024, 7, 13, 9, 0),
-    end: new Date(2024, 7, 13, 9, 45),
-  },
-  {
-    title: "Biology",
-    allDay: false,
-    start: new Date(2024, 7, 13, 10, 0),
-    end: new Date(2024, 7, 13, 10, 45),
-  },
-  {
-    title: "Physics",
+    title: "Fizik",
     allDay: false,
     start: new Date(2024, 7, 13, 11, 0),
     end: new Date(2024, 7, 13, 11, 45),
   },
 
   {
-    title: "History",
+    title: "Tarih",
     allDay: false,
     start: new Date(2024, 7, 13, 14, 0),
     end: new Date(2024, 7, 13, 14, 45),
   },
   {
-    title: "Math",
+    title: "Matematik",
     allDay: false,
     start: new Date(2024, 7, 14, 8, 0),
     end: new Date(2024, 7, 14, 8, 45),
   },
   {
-    title: "Biology",
+    title: "Biyoloji",
     allDay: false,
     start: new Date(2024, 7, 14, 10, 0),
     end: new Date(2024, 7, 14, 10, 45),
   },
 
   {
-    title: "Chemistry",
+    title: "Kimya",
     allDay: false,
     start: new Date(2024, 7, 14, 13, 0),
     end: new Date(2024, 7, 14, 13, 45),
   },
   {
-    title: "History",
+    title: "Tarih",
     allDay: false,
     start: new Date(2024, 7, 14, 14, 0),
     end: new Date(2024, 7, 13, 14, 45),
   },
   {
-    title: "English",
+    title: "İngilizce",
     allDay: false,
     start: new Date(2024, 7, 15, 9, 0),
     end: new Date(2024, 7, 15, 9, 45),
   },
   {
-    title: "Biology",
+    title: "Biyoloji",
     allDay: false,
     start: new Date(2024, 7, 15, 10, 0),
     end: new Date(2024, 7, 15, 10, 45),
   },
   {
-    title: "Physics",
+    title: "Fizik",
     allDay: false,
     start: new Date(2024, 7, 15, 11, 0),
     end: new Date(2024, 7, 15, 11, 45),
   },
 
   {
-    title: "History",
+    title: "Tarih",
     allDay: false,
     start: new Date(2024, 7, 15, 14, 0),
     end: new Date(2024, 7, 15, 14, 45),
   },
   {
-    title: "Math",
+    title: "Matematik",
     allDay: false,
     start: new Date(2024, 7, 16, 8, 0),
     end: new Date(2024, 7, 16, 8, 45),
   },
   {
-    title: "English",
+    title: "İngilizce",
     allDay: false,
     start: new Date(2024, 7, 16, 9, 0),
     end: new Date(2024, 7, 16, 9, 45),
   },
 
   {
-    title: "Physics",
+    title: "Fizik",
     allDay: false,
     start: new Date(2024, 7, 16, 11, 0),
     end: new Date(2024, 7, 16, 11, 45),
   },
   {
-    title: "Chemistry",
+    title: "Kimya",
     allDay: false,
     start: new Date(2024, 7, 16, 13, 0),
     end: new Date(2024, 7, 16, 13, 45),
   },
   {
-    title: "History",
+    title: "Tarih",
     allDay: false,
     start: new Date(2024, 7, 16, 14, 0),
     end: new Date(2024, 7, 16, 14, 45),

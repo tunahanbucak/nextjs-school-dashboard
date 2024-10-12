@@ -14,19 +14,19 @@ const events = [
   {
     id: 1,
     title: "Lorem ipsum dolor",
-    time: "12:00 PM - 2:00 PM",
+    time: "12:00  - 15:00 ",
     descripton: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
   },
   {
     id: 2,
     title: "Lorem ipsum dolor",
-    time: "12:00 PM - 2:00 PM",
+    time: "16:30  - 18:00 ",
     descripton: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
   },
   {
     id: 3,
     title: "Lorem ipsum dolor",
-    time: "12:00 PM - 2:00 PM",
+    time: "20:00  - 22:00 ",
     descripton: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
   },
 ];
@@ -55,8 +55,8 @@ export default function EventCalendar() {
             )}`}
             key={event.id}>
             <div className="flex items-center justify-between">
-              <h1 className="font-semibold text-gray-600"> {event.title} </h1>
-              <span className="text-gray-300 text-xs"> {event.time} </span>
+              <h1 className="font-semibold text-gray-900"> {event.title} </h1>
+              <span className="text-gray-800 text-xs"> {event.time} </span>
             </div>
             <p className="mt-2 text-gray-400 text-sm"> {event.descripton}</p>
           </div>

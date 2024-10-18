@@ -1,51 +1,77 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { Button } from "./ui/button";
 import {
   Pagination,
   PaginationContent,
-  PaginationEllipsis,
   PaginationItem,
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
 } from "./ui/pagination";
 
-export default function pagination() {
+interface PaginationComponentProps {
+  totalItems: number;
+  itemsPerPage: number;
+}
+
+const PaginationComponent: React.FC<PaginationComponentProps> = ({
+  totalItems,
+  itemsPerPage,
+}) => {
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+  const handlePrevious = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handlePageClick = (page: number) => {
+    setCurrentPage(page);
+  };
+
   return (
-    <div className="p-4 flex items-center justify-between text-gray-500">
-      {/* <Button
-        disabled
-        className="py-2 px-4 rounded-md bg-slate-200 text-xs font-semibold disabled:opacity-50 disabled:cursor-not-allowed">
-        Önceki
+    <div className="p-4 flex items-center justify-center space-x-4 text-gray-500">
+      <Button
+        onClick={handlePrevious}
+        disabled={currentPage === 1}
+        className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50">
+        Previous
       </Button>
-      <div className="flex items-center gap-2 text-sm">
-        <Button variant='ghost' className="px-2 rounded-sm bg-lamaSky">1</Button>
-        <Button className="px-2 rounded-sm">2</Button>
-        <Button className="px-2 rounded-sm">3</Button>
-        ...
-        <Button className="px-2 rounded-sm">10</Button>
-      </div>
-      <Button className="py-2 px-4 rounded-md bg-slate-200 text-xs font-semibold disabled:opacity-50 disabled:cursor-not-allowed">
-        Next
-      </Button> */}
       <Pagination>
-        <PaginationContent>
-          <PaginationItem>
-            <PaginationPrevious href="#" />
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#">1</PaginationLink>
-            <PaginationLink href="#">2</PaginationLink>
-            <PaginationLink href="#">3</PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationEllipsis />
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationNext href="#" />
-          </PaginationItem>
+        <PaginationContent className="flex items-center">
+          {Array.from({ length: totalPages }, (_, index) => (
+            <PaginationItem key={index + 1}>
+              <PaginationLink
+                onClick={() => handlePageClick(index + 1)}
+                className={`px-3 py-1 rounded ${
+                  currentPage === index + 1
+                    ? "bg-lamaSky text-white"
+                    : "hover:bg-gray-200"
+                }`}>
+                {index + 1}
+              </PaginationLink>
+            </PaginationItem>
+          ))}
         </PaginationContent>
       </Pagination>
+      <Button
+        onClick={handleNext}
+        disabled={currentPage === totalPages}
+        className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50">
+        Next
+      </Button>
     </div>
   );
-}
+};
+
+export default PaginationComponent;

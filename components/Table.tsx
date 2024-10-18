@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import {
   Table,
   TableBody,
@@ -7,67 +8,110 @@ import {
   TableHeader,
   TableRow,
 } from "./ui/table";
-import { teachersData } from "@/lib/data";
 import { Avatar, AvatarImage } from "./ui/avatar";
 import { Button } from "./ui/button";
 import { Eye, Trash2 } from "lucide-react";
+import Link from "next/link";
 
-export default function TeacherTable() {
+const ITEMS_PER_PAGE = 10;
+
+type TableProps = {
+  data?: any[];
+  IDName?: string;
+  lessonName?: string;
+  className?: string;
+  number?: string;
+  address?: string;
+  role?: string;
+};
+
+export default function TableComponent({
+  data = [],
+  IDName,
+  lessonName,
+  className,
+  number,
+  address,
+  role = "user",
+}: TableProps) {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const totalPages = Math.ceil(data.length / ITEMS_PER_PAGE);
+
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const currentItems = data.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handlePreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
   return (
     <div className="overflow-x-auto">
       <Table className="min-w-full">
         <TableHeader>
           <TableRow>
-            <TableHead className="w-[100px] text-left">Info</TableHead>
-            <TableHead className="hidden md:table-cell">Teacher ID</TableHead>
-            <TableHead className="hidden md:table-cell">Lessons</TableHead>
-            <TableHead className="hidden md:table-cell">Classes</TableHead>
-            <TableHead className="hidden md:table-cell">Phone</TableHead>
-            <TableHead className="hidden md:table-cell">Address</TableHead>
-            <TableHead>Actions</TableHead>
+            <TableHead className="hidden md:table-cell">Info</TableHead>
+            <TableHead className="hidden md:table-cell">{IDName}</TableHead>
+            <TableHead className="hidden md:table-cell">{lessonName}</TableHead>
+            <TableHead className="hidden md:table-cell">{className}</TableHead>
+            <TableHead className="hidden md:table-cell">{number}</TableHead>
+            <TableHead className="hidden md:table-cell">{address}</TableHead>
+            <TableHead className="hidden md:table-cell">Actions</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
-          {teachersData.map((teacher) => (
-            <TableRow key={teacher.id} className="hover:bg-gray-100">
+          {currentItems.map((item) => (
+            <TableRow key={item.id} className="hover:bg-gray-100">
               <TableCell>
-                <div className="gap-3 flex items-center ">
-                  <Avatar className="w-10 h-10">
-                    <AvatarImage src={teacher.photo} alt="User Profile" />
+                <div className="gap-4 flex items-center">
+                  <Avatar className="w-10 h-10 md:hidden rounded-full object-cover xl:block">
+                    <AvatarImage src={item.photo} alt="User Profile" />
                   </Avatar>
                   <div>
                     <h1 className="font-extrabold text-sm sm:text-base">
-                      {teacher.name}
+                      {item.name}
                     </h1>
                     <h3 className="font-medium text-xs sm:text-sm">
-                      {teacher.email}
+                      {item.email}
                     </h3>
                   </div>
                 </div>
               </TableCell>
               <TableCell className="hidden md:table-cell text-xs sm:text-sm">
-                {teacher.teacherId}
+                {item.teacherId || item.studentId || item.parentId}
               </TableCell>
               <TableCell className="hidden md:table-cell text-xs sm:text-sm">
-                {teacher.subjects.join(", ")}
+                {item.subjects?.join(", ") || item.grade || item.role}
               </TableCell>
               <TableCell className="hidden md:table-cell text-xs sm:text-sm">
-                {teacher.classes.join(", ")}
+                {item.classes?.join(", ") || item.className}
               </TableCell>
               <TableCell className="hidden md:table-cell text-xs sm:text-sm">
-                {teacher.phone}
+                {item.phone}
               </TableCell>
               <TableCell className="hidden md:table-cell text-xs sm:text-sm">
-                {teacher.address}
+                {item.address}
               </TableCell>
               <TableCell>
                 <div className="flex items-center gap-2 sm:gap-4">
-                  <Button className="flex items-center justify-center rounded-full bg-lamaSky p-2 hover:bg-lamaSky">
-                    <Eye width={14} height={14} />
-                  </Button>
-                  <Button className="flex items-center justify-center rounded-full bg-lamaPurple p-2 hover:bg-lamaPurple">
-                    <Trash2 width={14} height={14} />
-                  </Button>
+                  <Link href={`/list/${role}/${item.id}`}>
+                    <Button className="flex items-center justify-center rounded-full bg-lamaSky p-2 hover:bg-lamaSky">
+                      <Eye width={16} height={16} />
+                    </Button>
+                  </Link>
+                  {role === "admin" && (
+                    <Button className="flex items-center justify-center rounded-full bg-lamaPurple p-2 hover:bg-lamaPurple">
+                      <Trash2 width={16} height={16} />
+                    </Button>
+                  )}
                 </div>
               </TableCell>
             </TableRow>

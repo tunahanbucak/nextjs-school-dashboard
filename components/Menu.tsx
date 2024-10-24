@@ -33,7 +33,7 @@ const menuItems = [
       },
       {
         icon: "/subject.png",
-        label: "Dersler",
+        label: "Konular",
         href: "/list/subjects",
         visible: ["admin"],
       },

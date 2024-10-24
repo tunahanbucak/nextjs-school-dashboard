@@ -10,8 +10,9 @@ import {
 } from "./ui/table";
 import { Avatar, AvatarImage } from "./ui/avatar";
 import { Button } from "./ui/button";
-import { Eye, Trash2 } from "lucide-react";
+import { Trash2, Pencil } from "lucide-react";
 import Link from "next/link";
+import { role } from "@/lib/data";
 
 const ITEMS_PER_PAGE = 10;
 
@@ -22,7 +23,8 @@ type TableProps = {
   className?: string;
   number?: string;
   address?: string;
-  role?: string;
+  name?: string;
+  info?: string;
 };
 
 export default function TableComponent({
@@ -32,39 +34,35 @@ export default function TableComponent({
   className,
   number,
   address,
-  role = "user",
+  name,
+  info,
 }: TableProps) {
   const [currentPage, setCurrentPage] = useState(1);
-
-  const totalPages = Math.ceil(data.length / ITEMS_PER_PAGE);
-
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const currentItems = data.slice(startIndex, startIndex + ITEMS_PER_PAGE);
-
-  const handleNextPage = () => {
-    if (currentPage < totalPages) {
-      setCurrentPage(currentPage + 1);
-    }
-  };
-
-  const handlePreviousPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
-    }
-  };
 
   return (
     <div className="overflow-x-auto">
       <Table className="min-w-full">
         <TableHeader>
           <TableRow>
-            <TableHead className="hidden md:table-cell">Info</TableHead>
-            <TableHead className="hidden md:table-cell">{IDName}</TableHead>
-            <TableHead className="hidden md:table-cell">{lessonName}</TableHead>
-            <TableHead className="hidden md:table-cell">{className}</TableHead>
-            <TableHead className="hidden md:table-cell">{number}</TableHead>
-            <TableHead className="hidden md:table-cell">{address}</TableHead>
-            <TableHead className="hidden md:table-cell">Actions</TableHead>
+            <TableHead className="font-bold">{info}</TableHead>
+            <TableHead className="hidden md:table-cell font-bold">
+              {IDName}
+            </TableHead>
+            <TableHead className="hidden md:table-cell font-bold">
+              {lessonName}
+            </TableHead>
+            <TableHead className="hidden md:table-cell font-bold">
+              {className}
+            </TableHead>
+            <TableHead className="hidden md:table-cell font-bold">
+              {number}
+            </TableHead>
+            <TableHead className="hidden md:table-cell font-bold">
+              {address}
+            </TableHead>
+            <TableHead className=" font-bold">Actions</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -72,39 +70,66 @@ export default function TableComponent({
             <TableRow key={item.id} className="hover:bg-gray-100">
               <TableCell>
                 <div className="gap-4 flex items-center">
-                  <Avatar className="w-10 h-10 md:hidden rounded-full object-cover xl:block">
-                    <AvatarImage src={item.photo} alt="User Profile" />
-                  </Avatar>
+                  {(name === "teachers" || name === "students") && (
+                    <Avatar className="w-10 h-10 md:hidden rounded-full object-cover xl:block">
+                      <AvatarImage src={item.photo} alt="User Profile" />
+                    </Avatar>
+                  )}
+
                   <div>
                     <h1 className="font-extrabold text-sm sm:text-base">
                       {item.name}
                     </h1>
-                    <h3 className="font-medium text-xs sm:text-sm">
-                      {item.email}
-                    </h3>
+                    {name === "students" ? (
+                      <h3 className="font-medium text-xs sm:text-sm">
+                        {item.class}
+                      </h3>
+                    ) : (
+                      <h3 className="font-medium text-xs sm:text-sm">
+                        {item.email ||
+                          item.lessonName ||
+                          item.classname ||
+                          item.subject}
+                      </h3>
+                    )}
                   </div>
                 </div>
               </TableCell>
-              <TableCell className="hidden md:table-cell text-xs sm:text-sm">
-                {item.teacherId || item.studentId || item.parentId}
+              <TableCell className="hidden md:table-cell text-xs sm:text-sm ">
+                {item.teacherId ||
+                  item.studentId ||
+                  item.students ||
+                  item.capacity ||
+                  item.class}
               </TableCell>
               <TableCell className="hidden md:table-cell text-xs sm:text-sm">
-                {item.subjects?.join(", ") || item.grade || item.role}
+                {item.subjects?.join(", ") ||
+                  item.grade ||
+                  item.teachers?.join(",") ||
+                  item.teacher}
               </TableCell>
               <TableCell className="hidden md:table-cell text-xs sm:text-sm">
-                {item.classes?.join(", ") || item.className}
+                {item.classes?.join(", ") ||
+                  item.className ||
+                  item.supervisor ||
+                  item.student}
               </TableCell>
               <TableCell className="hidden md:table-cell text-xs sm:text-sm">
-                {item.phone}
+                {item.phone || item.score}
               </TableCell>
               <TableCell className="hidden md:table-cell text-xs sm:text-sm">
-                {item.address}
+                {item.address || item.date || item.dueDate}
               </TableCell>
               <TableCell>
                 <div className="flex items-center gap-2 sm:gap-4">
                   <Link href={`/list/${role}/${item.id}`}>
                     <Button className="flex items-center justify-center rounded-full bg-lamaSky p-2 hover:bg-lamaSky">
-                      <Eye width={16} height={16} />
+                      {/* {name === "lessons" ? (
+                        // <Pencil width={16} height={16} />
+                      ) : (
+                        <Eye width={16} height={16} />
+                      )} */}
+                      <Pencil width={16} height={16} />
                     </Button>
                   </Link>
                   {role === "admin" && (

@@ -10,6 +10,7 @@ import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { Avatar, AvatarImage, AvatarFallback } from "./ui/avatar";
+import { role } from "@/lib/data";
 
 export default function Navbar() {
   return (
@@ -38,7 +39,7 @@ export default function Navbar() {
         <div className="flex items-center space-x-2">
           <div className="hidden md:flex flex-col text-right">
             <span className="text-sm font-medium">Tunahan BUCAK</span>
-            <span className="text-xs text-gray-500">ADMIN</span>
+            <span className="text-xs text-gray-500 uppercase">{role}</span>
           </div>
           <Avatar>
             <AvatarImage src="/avatar.png" alt="User Profile" />

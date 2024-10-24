@@ -1,9 +1,7 @@
 import TableSearch from "@/components/TableSearch";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import React from "react";
 import { ArrowDownNarrowWide, Plus, SlidersHorizontal } from "lucide-react";
-import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
 import PaginationComponent from "@/components/Pagination";
 import { role, teachersData } from "@/lib/data";
@@ -33,15 +31,16 @@ export default function TeacherListPage() {
         </div>
       </div>
       <Table
+        info="Info"
         data={teachersData}
         IDName="Teacher ID"
         lessonName="Lessons"
         className="Classes"
         number="Phone"
         address="Address"
-        role="teacher"
+        name="teachers"
       />
-      <PaginationComponent totalItems={100} itemsPerPage={5} />
+      <PaginationComponent totalItems={100} itemsPerPage={25} />
     </div>
   );
 }

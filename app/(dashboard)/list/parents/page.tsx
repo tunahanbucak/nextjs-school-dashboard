@@ -29,14 +29,14 @@ export default function page() {
         </div>
       </div>
       <Table
+        info="Info"
         data={parentsData}
-        role="student"
-        IDName="Student ID"
-        className="Grade"
+        IDName="Student Name"
         number="Phone"
         address="Address"
+        name="parents"
       />
-      <PaginationComponent totalItems={100} itemsPerPage={10} />
+      <PaginationComponent totalItems={100} itemsPerPage={25} />
     </div>
   );
 }

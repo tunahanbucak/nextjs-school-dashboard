@@ -6,7 +6,7 @@ import Table from "@/components/Table";
 import PaginationComponent from "@/components/Pagination";
 import { resultsData, role } from "@/lib/data";
 
-export default function TeacherListPage() {
+export default function page() {
   return (
     <div className=" bg-white p-4 rounded-md flex-1 m-4 mt-0">
       <div className="flex items-center justify-between">
@@ -29,13 +29,13 @@ export default function TeacherListPage() {
         </div>
       </div>
       <Table
-        info="Subjects"
+        info="Dersler"
         data={resultsData}
-        IDName="Class"
-        lessonName="Teacher"
-        className="Student"
-        number="Score"
-        address="Date"
+        IDName="Sınıf"
+        lessonName="Öğretmen"
+        className="Öğrenci"
+        number="Puan"
+        address="Tarih"
         name="result"
       />
       <PaginationComponent totalItems={100} itemsPerPage={25} />

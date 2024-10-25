@@ -4,14 +4,14 @@ import React from "react";
 import { ArrowDownNarrowWide, Plus, SlidersHorizontal } from "lucide-react";
 import Table from "@/components/Table";
 import PaginationComponent from "@/components/Pagination";
-import { role, teachersData } from "@/lib/data";
+import { eventsData, resultsData, role } from "@/lib/data";
 
 export default function page() {
   return (
     <div className=" bg-white p-4 rounded-md flex-1 m-4 mt-0">
       <div className="flex items-center justify-between">
         <h1 className="text-lg font-semibold hidden md:block ">
-          Tüm Öğretmenler
+          Tüm Etkinlikler
         </h1>
         <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto pb-5">
           <TableSearch />
@@ -31,14 +31,13 @@ export default function page() {
         </div>
       </div>
       <Table
-        info="Bilgi"
-        data={teachersData}
-        IDName="Öğretmen ID"
-        lessonName="Dersler"
-        className="Sınıflar"
-        number="Telefon Numarası"
-        address="Adres"
-        name="teachers"
+        info="Başlık"
+        data={eventsData}
+        IDName="Sınıf"
+        lessonName="Başlama Saati"
+        className="Bitiş Saati"
+        address="Tarih"
+        name="events"
       />
       <PaginationComponent totalItems={100} itemsPerPage={25} />
     </div>

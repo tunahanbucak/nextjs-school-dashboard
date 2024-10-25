@@ -29,9 +29,9 @@ export default function page() {
         </div>
       </div>
       <Table
-        info="Subjects Name"
+        info="Konu Adı"
         data={subjectsData}
-        lessonName="Teachers"
+        lessonName="Öğretmenler"
         name="subjects"
       />
       <PaginationComponent totalItems={100} itemsPerPage={25} />

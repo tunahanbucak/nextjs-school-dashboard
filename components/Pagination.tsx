@@ -43,7 +43,7 @@ const PaginationComponent: React.FC<PaginationComponentProps> = ({
         onClick={handlePrevious}
         disabled={currentPage === 1}
         className="bg-gray-200 px-4 py-2 rounded shadow disabled:opacity-50 transition-colors duration-200 hover:bg-gray-300">
-        Previous
+        Geri{" "}
       </Button>
       <Pagination className="flex items-center my-2 md:my-0">
         <PaginationContent className="flex items-center space-x-1">
@@ -67,7 +67,7 @@ const PaginationComponent: React.FC<PaginationComponentProps> = ({
         onClick={handleNext}
         disabled={currentPage === totalPages}
         className="bg-gray-200 px-4 py-2 rounded shadow disabled:opacity-50 transition-colors duration-200 hover:bg-gray-300">
-        Next
+        İleri
       </Button>
     </div>
   );

@@ -62,7 +62,7 @@ export default function TableComponent({
             <TableHead className="hidden md:table-cell font-bold">
               {address}
             </TableHead>
-            <TableHead className=" font-bold">Actions</TableHead>
+            <TableHead className=" font-bold">Hareketler</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -89,30 +89,33 @@ export default function TableComponent({
                         {item.email ||
                           item.lessonName ||
                           item.classname ||
-                          item.subject}
+                          item.subject ||
+                          item.title}
                       </h3>
                     )}
                   </div>
                 </div>
               </TableCell>
-              <TableCell className="hidden md:table-cell text-xs sm:text-sm ">
+              <TableCell className="hidden md:table-cell text-xs sm:text-sm p-2">
                 {item.teacherId ||
                   item.studentId ||
                   item.students ||
                   item.capacity ||
                   item.class}
               </TableCell>
-              <TableCell className="hidden md:table-cell text-xs sm:text-sm">
+              <TableCell className="hidden md:table-cell text-xs sm:text-sm p-4">
                 {item.subjects?.join(", ") ||
                   item.grade ||
                   item.teachers?.join(",") ||
-                  item.teacher}
+                  item.teacher ||
+                  item.startTime}
               </TableCell>
               <TableCell className="hidden md:table-cell text-xs sm:text-sm">
                 {item.classes?.join(", ") ||
                   item.className ||
                   item.supervisor ||
-                  item.student}
+                  item.student ||
+                  item.endTime}
               </TableCell>
               <TableCell className="hidden md:table-cell text-xs sm:text-sm">
                 {item.phone || item.score}
@@ -122,7 +125,7 @@ export default function TableComponent({
               </TableCell>
               <TableCell>
                 <div className="flex items-center gap-2 sm:gap-4">
-                  <Link href={`/list/${role}/${item.id}`}>
+                  <Link href={`/list/${name}/${item.id}`}>
                     <Button className="flex items-center justify-center rounded-full bg-lamaSky p-2 hover:bg-lamaSky">
                       {/* {name === "lessons" ? (
                         // <Pencil width={16} height={16} />

@@ -23,7 +23,6 @@ export default function Announcements() {
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
-
         <div className="bg-lamaPurpleLight rounded-md p-4">
           <div className="flex items-center justify-between">
             <h2 className="font-bold">Lorem ipsum dolor sit</h2>
@@ -36,7 +35,6 @@ export default function Announcements() {
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
-
         <div className="bg-lamaYellow rounded-md p-4">
           <div className="flex items-center justify-between">
             <h2 className="font-bold">Lorem ipsum dolor sit</h2>

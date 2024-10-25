@@ -29,11 +29,11 @@ export default function page() {
         </div>
       </div>
       <Table
-        info="Info"
+        info="Bilgi"
         data={parentsData}
-        IDName="Student Name"
-        number="Phone"
-        address="Address"
+        IDName="Öğrenci İsmi"
+        number="Telefon Numarası"
+        address="Adres"
         name="parents"
       />
       <PaginationComponent totalItems={100} itemsPerPage={25} />

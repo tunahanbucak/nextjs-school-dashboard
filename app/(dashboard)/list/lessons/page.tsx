@@ -29,10 +29,10 @@ export default function page() {
         </div>
       </div>
       <Table
-        info="Subjects Name"
+        info="Ders Adı"
         data={lessonsData}
-        IDName="Class"
-        lessonName="Teacher"
+        IDName="Sınıf"
+        lessonName="Öğretmen"
         name="lessons"
       />
       <PaginationComponent totalItems={100} itemsPerPage={25} />

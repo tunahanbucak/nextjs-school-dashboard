@@ -398,12 +398,12 @@ export const subjectsData = [
   },
   {
     id: 7,
-    lessonName: "Geography",
+    lessonName: "Geometri",
     teachers: ["Lora French", "Sue Brady"],
   },
   {
     id: 8,
-    lessonName: "Art",
+    lessonName: "Resim",
     teachers: ["Harriet Alvarado", "Mayme Keller"],
   },
   {
@@ -506,19 +506,19 @@ export const lessonsData = [
   },
   {
     id: 3,
-    subject: "Science",
+    subject: "Fen Bilimleri",
     class: "3A",
     teacher: "Della Dunn",
   },
   {
     id: 4,
-    subject: "Social Studies",
+    subject: "Hayat Bilgisi",
     class: "1B",
     teacher: "Bruce Rodriguez",
   },
   {
     id: 5,
-    subject: "Art",
+    subject: "Resim",
     class: "4A",
     teacher: "Birdie Butler",
   },
@@ -536,7 +536,7 @@ export const lessonsData = [
   },
   {
     id: 8,
-    subject: "Geography",
+    subject: "Geometri",
     class: "6B",
     teacher: "Lucinda Thomas",
   },
@@ -571,21 +571,21 @@ export const examsData = [
   },
   {
     id: 3,
-    subject: "Science",
+    subject: "Fen Bilimleri",
     class: "3A",
     teacher: "Myrtie Scott",
     date: "2025-01-01",
   },
   {
     id: 4,
-    subject: "Social Studies",
+    subject: "Hayat Bilgisi",
     class: "1B",
     teacher: "Alvin Swanson",
     date: "2025-01-01",
   },
   {
     id: 5,
-    subject: "Art",
+    subject: "Resim",
     class: "4A",
     teacher: "Mabelle Wallace",
     date: "2025-01-01",
@@ -606,7 +606,7 @@ export const examsData = [
   },
   {
     id: 8,
-    subject: "Geography",
+    subject: "Geometri",
     class: "6B",
     teacher: "Hunter Fuller",
     date: "2025-01-01",
@@ -644,21 +644,21 @@ export const assignmentsData = [
   },
   {
     id: 3,
-    subject: "Science",
+    subject: "Fen Bilimleri",
     class: "3A",
     teacher: "Catherine Malone",
     dueDate: "2025-01-01",
   },
   {
     id: 4,
-    subject: "Social Studies",
+    subject: "Hayat Bilgisi",
     class: "1B",
     teacher: "Willie Medina",
     dueDate: "2025-01-01",
   },
   {
     id: 5,
-    subject: "Art",
+    subject: "Resim",
     class: "4A",
     teacher: "Jose Ruiz",
     dueDate: "2025-01-01",
@@ -679,7 +679,7 @@ export const assignmentsData = [
   },
   {
     id: 8,
-    subject: "Geography",
+    subject: "Geometri",
     class: "6B",
     teacher: "Don Holloway",
     dueDate: "2025-01-01",
@@ -723,7 +723,7 @@ export const resultsData = [
   },
   {
     id: 3,
-    subject: "Science",
+    subject: "Fen Bilimleri",
     class: "3A",
     teacher: "John Doe",
     student: "John Doe",
@@ -733,7 +733,7 @@ export const resultsData = [
   },
   {
     id: 4,
-    subject: "Social Studies",
+    subject: "Hayat Bilgisi",
     class: "1B",
     teacher: "John Doe",
     student: "John Doe",
@@ -743,7 +743,7 @@ export const resultsData = [
   },
   {
     id: 5,
-    subject: "Art",
+    subject: "Resim",
     class: "4A",
     teacher: "John Doe",
     student: "John Doe",
@@ -773,7 +773,7 @@ export const resultsData = [
   },
   {
     id: 8,
-    subject: "Geography",
+    subject: "Geometri",
     class: "6B",
     teacher: "John Doe",
     student: "John Doe",
@@ -806,7 +806,7 @@ export const resultsData = [
 export const eventsData = [
   {
     id: 1,
-    title: "Lake Trip",
+    title: "Göl Gezisi",
     class: "1A",
     date: "2025-01-01",
     startTime: "10:00",
@@ -814,7 +814,7 @@ export const eventsData = [
   },
   {
     id: 2,
-    title: "Picnic",
+    title: "Piknik",
     class: "2A",
     date: "2025-01-01",
     startTime: "10:00",
@@ -822,7 +822,7 @@ export const eventsData = [
   },
   {
     id: 3,
-    title: "Beach Trip",
+    title: "Plaj Gezisi",
     class: "3A",
     date: "2025-01-01",
     startTime: "10:00",
@@ -830,7 +830,7 @@ export const eventsData = [
   },
   {
     id: 4,
-    title: "Museum Trip",
+    title: "Müze Gezisi",
     class: "4A",
     date: "2025-01-01",
     startTime: "10:00",
@@ -838,7 +838,7 @@ export const eventsData = [
   },
   {
     id: 5,
-    title: "Müzik Concert",
+    title: "Konser",
     class: "5A",
     date: "2025-01-01",
     startTime: "10:00",
@@ -846,7 +846,7 @@ export const eventsData = [
   },
   {
     id: 6,
-    title: "Magician Show",
+    title: "Sihirbaz Gösterisi",
     class: "1B",
     date: "2025-01-01",
     startTime: "10:00",
@@ -854,7 +854,7 @@ export const eventsData = [
   },
   {
     id: 7,
-    title: "Lake Trip",
+    title: "Göl Gezisi",
     class: "2B",
     date: "2025-01-01",
     startTime: "10:00",
@@ -862,7 +862,7 @@ export const eventsData = [
   },
   {
     id: 8,
-    title: "Cycling Race",
+    title: "Bisiklet Yarışı",
     class: "3B",
     date: "2025-01-01",
     startTime: "10:00",
@@ -870,7 +870,7 @@ export const eventsData = [
   },
   {
     id: 9,
-    title: "Art Exhibition",
+    title: "Sanat Sergisi Gezisi",
     class: "4B",
     date: "2025-01-01",
     startTime: "10:00",
@@ -878,7 +878,7 @@ export const eventsData = [
   },
   {
     id: 10,
-    title: "Sports Tournament",
+    title: "Futbol Turnuvası",
     class: "5B",
     date: "2025-01-01",
     startTime: "10:00",
@@ -889,61 +889,61 @@ export const eventsData = [
 export const announcementsData = [
   {
     id: 1,
-    title: "About 4A Matematik Test",
+    title: "4A Matematik Testi Hakkında",
     class: "4A",
     date: "2025-01-01",
   },
   {
     id: 2,
-    title: "About 3A Matematik Test",
+    title: "3A Fen Bilimleri Testi Hakkında",
     class: "3A",
     date: "2025-01-01",
   },
   {
     id: 3,
-    title: "About 3B Matematik Test",
+    title: "3B Hayat Bilgisi Testi Hakkında",
     class: "3B",
     date: "2025-01-01",
   },
   {
     id: 4,
-    title: "About 6A Matematik Test",
+    title: "6A İngilizce Testi Hakkında",
     class: "6A",
     date: "2025-01-01",
   },
   {
     id: 5,
-    title: "About 8C Matematik Test",
+    title: "8C Geometri Testi Hakkında",
     class: "8C",
     date: "2025-01-01",
   },
   {
     id: 6,
-    title: "About 2A Matematik Test",
+    title: "2A Matematik Testi Hakkında",
     class: "2A",
     date: "2025-01-01",
   },
   {
     id: 7,
-    title: "About 4C Matematik Test",
+    title: "4C Hayat Bilgisi Testi Hakkında",
     class: "4C",
     date: "2025-01-01",
   },
   {
     id: 8,
-    title: "About 4B Matematik Test",
+    title: "4B Matematik Testi Hakkında",
     class: "4B",
     date: "2025-01-01",
   },
   {
     id: 9,
-    title: "About 3C Matematik Test",
+    title: "3C İngilizce Testi Hakkında",
     class: "3C",
     date: "2025-01-01",
   },
   {
     id: 10,
-    title: "About 1C Matematik Test",
+    title: "1C Matematik Testi Hakkında",
     class: "1C",
     date: "2025-01-01",
   },

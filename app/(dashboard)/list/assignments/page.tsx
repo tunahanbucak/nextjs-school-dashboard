@@ -1,3 +1,6 @@
+"use  client";
+
+import FormModal from "@/components/FormModal";
 import PaginationComponent from "@/components/Pagination";
 import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
@@ -28,9 +31,10 @@ export default function page() {
               <ArrowDownNarrowWide width={14} height={14} />
             </Button>
             {role === "admin" && (
-              <Button className="flex items-center justify-center rounded-full bg-lamaYellow">
-                <Plus width={14} height={14} />
-              </Button>
+              // <Button className="flex items-center justify-center rounded-full bg-lamaYellow">
+              //   <Plus width={14} height={14} />
+              // </Button>
+              <FormModal table="assignment" type="create" />
             )}
           </div>
         </div>

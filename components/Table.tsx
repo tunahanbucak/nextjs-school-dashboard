@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 import {
   Table,
@@ -10,7 +11,7 @@ import {
 } from "./ui/table";
 import { Avatar, AvatarImage } from "./ui/avatar";
 import { Button } from "./ui/button";
-import { Trash2, Pencil } from "lucide-react";
+import { Trash2, Pencil, Eye } from "lucide-react";
 import Link from "next/link";
 import { role } from "@/lib/data";
 
@@ -25,6 +26,7 @@ type TableProps = {
   address?: string;
   name?: string;
   info?: string;
+  renderActions?: (item: any) => JSX.Element;
 };
 
 export default function TableComponent({
@@ -36,6 +38,7 @@ export default function TableComponent({
   address,
   name,
   info,
+  renderActions,
 }: TableProps) {
   const [currentPage, setCurrentPage] = useState(1);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
@@ -75,7 +78,6 @@ export default function TableComponent({
                       <AvatarImage src={item.photo} alt="User Profile" />
                     </Avatar>
                   )}
-
                   <div>
                     <h1 className="font-extrabold text-sm sm:text-base">
                       {item.name}
@@ -125,20 +127,25 @@ export default function TableComponent({
               </TableCell>
               <TableCell>
                 <div className="flex items-center gap-2 sm:gap-4">
-                  <Link href={`/list/${name}/${item.id}`}>
-                    <Button className="flex items-center justify-center rounded-full bg-lamaSky p-2 hover:bg-lamaSky">
-                      {/* {name === "lessons" ? (
-                        // <Pencil width={16} height={16} />
-                      ) : (
-                        <Eye width={16} height={16} />
-                      )} */}
-                      <Pencil width={16} height={16} />
-                    </Button>
-                  </Link>
-                  {role === "admin" && (
-                    <Button className="flex items-center justify-center rounded-full bg-lamaPurple p-2 hover:bg-lamaPurple">
-                      <Trash2 width={16} height={16} />
-                    </Button>
+                  {renderActions ? (
+                    renderActions(item)
+                  ) : (
+                    <>
+                      <Link href={`/list/${name}/${item.id}`}>
+                        <Button className="flex items-center justify-center rounded-full bg-lamaSky p-2 hover:bg-lamaSky">
+                          {name === "teachers" || name === "students" ? (
+                            <Eye width={16} height={16} />
+                          ) : (
+                            <Pencil width={16} height={16} />
+                          )}
+                        </Button>
+                      </Link>
+                      {role === "admin" && (
+                        <Button className="flex items-center justify-center rounded-full bg-lamaPurple p-2 hover:bg-lamaPurple">
+                          <Trash2 width={16} height={16} />
+                        </Button>
+                      )}
+                    </>
                   )}
                 </div>
               </TableCell>

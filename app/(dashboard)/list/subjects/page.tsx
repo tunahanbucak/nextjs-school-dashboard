@@ -1,3 +1,6 @@
+"use client";
+
+import FormModal from "@/components/FormModal";
 import PaginationComponent from "@/components/Pagination";
 import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
@@ -21,9 +24,10 @@ export default function page() {
               <ArrowDownNarrowWide width={14} height={14} />
             </Button>
             {role === "admin" && (
-              <Button className="flex items-center justify-center rounded-full bg-lamaYellow">
-                <Plus width={14} height={14} />
-              </Button>
+              // <Button className="flex items-center justify-center rounded-full bg-lamaYellow">
+              //   <Plus width={14} height={14} />
+              // </Button>
+              <FormModal table="subject" type="create" />
             )}
           </div>
         </div>
@@ -33,6 +37,24 @@ export default function page() {
         data={subjectsData}
         lessonName="Öğretmenler"
         name="subjects"
+        renderActions={(item) => (
+          <>
+            {/* <Link href={`/list/students/${item.id}`}>
+              <Button className="flex items-center justify-center rounded-full bg-lamaSky p-2 hover:bg-lamaSky">
+                <Eye width={16} height={16} />
+              </Button>
+            </Link> */}
+            {role === "admin" && (
+              // <Button className="flex items-center justify-center rounded-full bg-lamaPurple p-2 hover:bg-lamaPurple">
+              //   <Trash2 width={16} height={16} />
+              // </Button>
+              <>
+                <FormModal table="subject" type="update" data={item} />
+                <FormModal table="subject" type="delete" id={item.id} />
+              </>
+            )}
+          </>
+        )}
       />
       <PaginationComponent totalItems={100} itemsPerPage={25} />
     </div>

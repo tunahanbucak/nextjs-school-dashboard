@@ -1,3 +1,6 @@
+"use client";
+
+import FormModal from "@/components/FormModal";
 import PaginationComponent from "@/components/Pagination";
 import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
@@ -30,9 +33,10 @@ export default function page() {
               <ArrowDownNarrowWide width={14} height={14} />
             </Button>
             {role === "admin" && (
-              <Button className="flex items-center justify-center rounded-full bg-lamaYellow">
-                <Plus width={14} height={14} />
-              </Button>
+              // <Button className="flex items-center justify-center rounded-full bg-lamaYellow">
+              //   <Plus width={14} height={14} />
+              // </Button>
+              <FormModal table="announcement" type="create" />
             )}
           </div>
         </div>
@@ -43,6 +47,19 @@ export default function page() {
         IDName="Sınıf"
         address="Tarih"
         name="announcements"
+        renderActions={(item) => (
+          <>
+            {role === "admin" && (
+              // <Button className="flex items-center justify-center rounded-full bg-lamaPurple p-2 hover:bg-lamaPurple">
+              //   <Trash2 width={16} height={16} />
+              // </Button>
+              <>
+                <FormModal table="announcement" type="update" data={item} />
+                <FormModal table="announcement" type="delete" id={item.id} />
+              </>
+            )}
+          </>
+        )}
       />
       <PaginationComponent totalItems={100} itemsPerPage={25} />
     </div>

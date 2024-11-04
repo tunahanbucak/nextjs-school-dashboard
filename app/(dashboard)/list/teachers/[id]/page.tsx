@@ -2,6 +2,7 @@
 
 import Announcements from "@/components/Announcements";
 import BigCalendar from "@/components/BigCalendar";
+import FormModal from "@/components/FormModal";
 import Performance from "@/components/Performance";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Image from "next/image";
@@ -31,7 +32,26 @@ export default function SingleTeacherPage() {
               />
             </CardHeader>
             <CardContent className="w-2/3 flex flex-col justify-between gap-4">
-              <h1 className="text-xl font-semibold">Burcu Özberk</h1>
+              <div className="flex items-center gap-4">
+                <h1 className="text-xl font-semibold">Burcu Özberk</h1>
+                <FormModal
+                  table="teacher"
+                  type="update"
+                  data={{
+                    id: 1,
+                    username: "tunahan",
+                    email: "tuna@mail.com",
+                    password: "password",
+                    firstname: "Tunahan",
+                    lastname: "Bucak",
+                    phone: "055555555555",
+                    address: "1234 Main St",
+                    bloodType: "A+",
+                    dateOfBirth: "2003-21-03",
+                    sex: "male",
+                  }}
+                />
+              </div>
               <p className="text-sm text-gray-500">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               </p>

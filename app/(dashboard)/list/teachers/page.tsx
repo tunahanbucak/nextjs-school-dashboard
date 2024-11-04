@@ -32,13 +32,7 @@ export default function page() {
             <Button className="flex items-center justify-center rounded-full bg-lamaYellow">
               <ArrowDownNarrowWide width={14} height={14} />
             </Button>
-            {role === "admin" && (
-              // <Button className="flex items-center justify-center rounded-full bg-lamaYellow">
-              //   {/* <Plus width={14} height={14} /> */}
-              //   <Image src="/create.png" alt="" width={14} height={14} />
-              // </Button>
-              <FormModal table="teacher" type="create" />
-            )}
+            {role === "admin" && <FormModal table="teacher" type="create" />}
           </div>
         </div>
       </div>
@@ -59,9 +53,6 @@ export default function page() {
               </Button>
             </Link>
             {role === "admin" && (
-              // <Button className="flex items-center justify-center rounded-full bg-lamaPurple p-2 hover:bg-lamaPurple">
-              //   <Trash2 width={16} height={16} />
-              // </Button>
               <FormModal table="teacher" type="delete" id={item.id} />
             )}
           </>

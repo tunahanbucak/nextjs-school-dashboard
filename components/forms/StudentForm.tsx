@@ -121,7 +121,6 @@ export default function StudentForm({
           register={register}
           error={errors.bloodType}
         />
-
         <InputField
           label="Doğum tarihi"
           name="birthday"
@@ -145,7 +144,6 @@ export default function StudentForm({
             </p>
           )}
         </div>
-
         <div className="flex flex-col gap-2 w-full md:w-1/4 justify-center">
           <label
             className="text-xs text-gray-500 flex items-center gap-2 cursor-pointer"

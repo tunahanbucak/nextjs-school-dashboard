@@ -5,15 +5,8 @@ import PaginationComponent from "@/components/Pagination";
 import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
 import { Button } from "@/components/ui/button";
-import {
-  assignmentsData,
-  examsData,
-  lessonsData,
-  parentsData,
-  role,
-  subjectsData,
-} from "@/lib/data";
-import { ArrowDownNarrowWide, Plus, SlidersHorizontal } from "lucide-react";
+import { assignmentsData, role } from "@/lib/data";
+import { ArrowDownNarrowWide, SlidersHorizontal } from "lucide-react";
 import React from "react";
 
 export default function page() {
@@ -30,12 +23,7 @@ export default function page() {
             <Button className="flex items-center justify-center rounded-full bg-lamaYellow">
               <ArrowDownNarrowWide width={14} height={14} />
             </Button>
-            {role === "admin" && (
-              // <Button className="flex items-center justify-center rounded-full bg-lamaYellow">
-              //   <Plus width={14} height={14} />
-              // </Button>
-              <FormModal table="assignment" type="create" />
-            )}
+            {role === "admin" && <FormModal table="assignment" type="create" />}
           </div>
         </div>
       </div>

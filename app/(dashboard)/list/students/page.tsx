@@ -6,13 +6,7 @@ import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
 import { Button } from "@/components/ui/button";
 import { role, studentsData } from "@/lib/data";
-import {
-  ArrowDownNarrowWide,
-  Eye,
-  Plus,
-  SlidersHorizontal,
-  Trash2,
-} from "lucide-react";
+import { ArrowDownNarrowWide, Eye, SlidersHorizontal } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -32,12 +26,7 @@ export default function page() {
             <Button className="flex items-center justify-center rounded-full bg-lamaYellow">
               <ArrowDownNarrowWide width={14} height={14} />
             </Button>
-            {role === "admin" && (
-              // <Button className="flex items-center justify-center rounded-full bg-lamaYellow">
-              //   <Plus width={14} height={14} />
-              // </Button>
-              <FormModal table="student" type="create" />
-            )}
+            {role === "admin" && <FormModal table="student" type="create" />}
           </div>
         </div>
       </div>
@@ -57,15 +46,11 @@ export default function page() {
               </Button>
             </Link>
             {role === "admin" && (
-              // <Button className="flex items-center justify-center rounded-full bg-lamaPurple p-2 hover:bg-lamaPurple">
-              //   <Trash2 width={16} height={16} />
-              // </Button>
               <FormModal table="student" type="delete" id={item.id} />
             )}
           </>
         )}
       />
-
       <PaginationComponent totalItems={100} itemsPerPage={25} />
     </div>
   );

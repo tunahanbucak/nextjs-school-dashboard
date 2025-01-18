@@ -4,7 +4,7 @@ import React from "react";
 import { ArrowDownNarrowWide, Plus, SlidersHorizontal } from "lucide-react";
 import Table from "@/components/Table";
 import PaginationComponent from "@/components/Pagination";
-import { eventsData, resultsData, role } from "@/lib/data";
+import { eventsData, role } from "@/lib/data";
 
 export default function page() {
   return (

@@ -1,7 +1,6 @@
 "use client";
 
-import Image from "next/image";
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from "recharts";
+import { PieChart, Pie, ResponsiveContainer } from "recharts";
 import { Button } from "./ui/button";
 import { Ellipsis } from "lucide-react";
 

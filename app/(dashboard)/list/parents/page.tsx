@@ -7,7 +7,6 @@ import TableSearch from "@/components/TableSearch";
 import { Button } from "@/components/ui/button";
 import { parentsData, role } from "@/lib/data";
 import { ArrowDownNarrowWide, Plus, SlidersHorizontal } from "lucide-react";
-import Link from "next/link";
 import React from "react";
 
 export default function page() {
@@ -24,11 +23,7 @@ export default function page() {
             <Button className="flex items-center justify-center rounded-full bg-lamaYellow">
               <ArrowDownNarrowWide width={14} height={14} />
             </Button>
-            {role === "admin" && (
-              <Button className="flex items-center justify-center rounded-full bg-lamaYellow">
-                <Plus width={14} height={14} />
-              </Button>
-            )}
+            {role === "admin" && <FormModal table="parent" type="create" />}
           </div>
         </div>
       </div>
@@ -41,15 +36,7 @@ export default function page() {
         name="parents"
         renderActions={(item) => (
           <>
-            {/* <Link href={`/list/students/${item.id}`}>
-              <Button className="flex items-center justify-center rounded-full bg-lamaSky p-2 hover:bg-lamaSky">
-                <Eye width={16} height={16} />
-              </Button>
-            </Link> */}
             {role === "admin" && (
-              // <Button className="flex items-center justify-center rounded-full bg-lamaPurple p-2 hover:bg-lamaPurple">
-              //   <Trash2 width={16} height={16} />
-              // </Button>
               <>
                 <FormModal table="parent" type="update" data={item} />
                 <FormModal table="parent" type="delete" id={item.id} />

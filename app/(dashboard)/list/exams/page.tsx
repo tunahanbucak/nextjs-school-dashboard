@@ -5,14 +5,8 @@ import PaginationComponent from "@/components/Pagination";
 import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
 import { Button } from "@/components/ui/button";
-import {
-  examsData,
-  lessonsData,
-  parentsData,
-  role,
-  subjectsData,
-} from "@/lib/data";
-import { ArrowDownNarrowWide, Plus, SlidersHorizontal } from "lucide-react";
+import { examsData, role } from "@/lib/data";
+import { ArrowDownNarrowWide, SlidersHorizontal } from "lucide-react";
 import React from "react";
 
 export default function page() {
@@ -29,12 +23,7 @@ export default function page() {
             <Button className="flex items-center justify-center rounded-full bg-lamaYellow">
               <ArrowDownNarrowWide width={14} height={14} />
             </Button>
-            {role === "admin" && (
-              // <Button className="flex items-center justify-center rounded-full bg-lamaYellow">
-              //   <Plus width={14} height={14} />
-              // </Button>
-              <FormModal table="exam" type="create" />
-            )}
+            {role === "admin" && <FormModal table="exam" type="create" />}
           </div>
         </div>
       </div>
@@ -47,15 +36,7 @@ export default function page() {
         name="exams"
         renderActions={(item) => (
           <>
-            {/* <Link href={`/list/students/${item.id}`}>
-              <Button className="flex items-center justify-center rounded-full bg-lamaSky p-2 hover:bg-lamaSky">
-                <Eye width={16} height={16} />
-              </Button>
-            </Link> */}
             {role === "admin" && (
-              // <Button className="flex items-center justify-center rounded-full bg-lamaPurple p-2 hover:bg-lamaPurple">
-              //   <Trash2 width={16} height={16} />
-              // </Button>
               <>
                 <FormModal table="exam" type="update" data={item} />
                 <FormModal table="exam" type="delete" id={item.id} />

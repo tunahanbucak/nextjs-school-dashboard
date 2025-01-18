@@ -3,17 +3,11 @@
 import TableSearch from "@/components/TableSearch";
 import { Button } from "@/components/ui/button";
 import React from "react";
-import {
-  ArrowDownNarrowWide,
-  Eye,
-  Plus,
-  SlidersHorizontal,
-} from "lucide-react";
+import { ArrowDownNarrowWide, Eye, SlidersHorizontal } from "lucide-react";
 import Table from "@/components/Table";
 import PaginationComponent from "@/components/Pagination";
 import { role, teachersData } from "@/lib/data";
 import FormModal from "@/components/FormModal";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function page() {

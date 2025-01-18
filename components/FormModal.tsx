@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import { Button } from "./ui/button";
-import Image from "next/image";
 import { Trash2, Pencil, Plus, X } from "lucide-react";
 import dynamic from "next/dynamic";
 // import TeacherForm from "./forms/TeacherForm";

@@ -1,10 +1,11 @@
 import TableSearch from "@/components/TableSearch";
 import { Button } from "@/components/ui/button";
 import React from "react";
-import { ArrowDownNarrowWide, Plus, SlidersHorizontal } from "lucide-react";
+import { ArrowDownNarrowWide, SlidersHorizontal } from "lucide-react";
 import Table from "@/components/Table";
 import PaginationComponent from "@/components/Pagination";
 import { resultsData, role } from "@/lib/data";
+import FormModal from "@/components/FormModal";
 
 export default function page() {
   return (
@@ -20,11 +21,7 @@ export default function page() {
             <Button className="flex items-center justify-center rounded-full bg-lamaYellow">
               <ArrowDownNarrowWide width={14} height={14} />
             </Button>
-            {role === "admin" && (
-              <Button className="flex items-center justify-center rounded-full bg-lamaYellow">
-                <Plus width={14} height={14} />
-              </Button>
-            )}
+            {role === "admin" && <FormModal table="result" type="create" />}
           </div>
         </div>
       </div>
@@ -37,6 +34,16 @@ export default function page() {
         number="Puan"
         address="Tarih"
         name="result"
+        renderActions={(item) => (
+          <>
+            {role === "admin" && (
+              <>
+                <FormModal table="result" type="update" data={item} />
+                <FormModal table="result" type="delete" id={item.id} />
+              </>
+            )}
+          </>
+        )}
       />
       <PaginationComponent totalItems={100} itemsPerPage={25} />
     </div>

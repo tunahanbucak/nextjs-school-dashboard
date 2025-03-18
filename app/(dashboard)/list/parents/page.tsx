@@ -6,7 +6,7 @@ import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
 import { Button } from "@/components/ui/button";
 import { parentsData, role } from "@/lib/data";
-import { ArrowDownNarrowWide, Plus, SlidersHorizontal } from "lucide-react";
+import { ArrowDownNarrowWide, SlidersHorizontal } from "lucide-react";
 import React from "react";
 
 export default function page() {

@@ -26,7 +26,7 @@ type TableProps = {
   address?: string;
   name?: string;
   info?: string;
-  renderActions?: (item: any) => JSX.Element;
+  renderActions?: (item: any) => React.ReactNode;
 };
 
 export default function TableComponent({

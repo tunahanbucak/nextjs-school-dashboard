@@ -6,6 +6,7 @@ import Table from "@/components/Table";
 import PaginationComponent from "@/components/Pagination";
 import { resultsData, role } from "@/lib/data";
 import FormModal from "@/components/FormModal";
+import ResultsTable from "@/components/ResulsTable";
 
 export default function page() {
   return (
@@ -25,7 +26,7 @@ export default function page() {
           </div>
         </div>
       </div>
-      <Table
+      {/* <Table
         info="Dersler"
         data={resultsData}
         IDName="Sınıf"
@@ -44,7 +45,8 @@ export default function page() {
             )}
           </>
         )}
-      />
+      /> */}
+      <ResultsTable />
       <PaginationComponent totalItems={100} itemsPerPage={25} />
     </div>
   );

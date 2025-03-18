@@ -455,7 +455,7 @@ export const classesData = [
     supervisor: "Iva Frank",
   },
   {
-    id: 5,
+    id: 6,
     classname: "5B",
     capacity: 20,
     grade: 5,

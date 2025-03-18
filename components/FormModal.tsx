@@ -15,7 +15,7 @@ const StudentForm = dynamic(() => import("./forms/StudentForm"), {
 });
 
 const forms: {
-  [key: string]: (type: "create" | "update", data?: any) => JSX.Element;
+  [key: string]: (type: "create" | "update", data?: any) => React.ReactNode;
 } = {
   teacher: (type, data) => <TeacherForm type={type} data={data} />,
   student: (type, data) => <StudentForm type={type} data={data} />,
@@ -80,7 +80,8 @@ export default function FormModal({ table, type, data, id }: FormModalProps) {
     <>
       <Button
         onClick={() => setOpen(true)}
-        className={`flex items-center justify-center rounded-full hover:${bgColor}  ${bgColor} `}>
+        className={`flex items-center justify-center rounded-full hover:${bgColor}  ${bgColor} `}
+      >
         <Icon size={16} />
       </Button>
       {open && (
@@ -89,7 +90,8 @@ export default function FormModal({ table, type, data, id }: FormModalProps) {
             <Form />
             <div
               className="absolute top-4 right-4 cursor-pointer"
-              onClick={() => setOpen(false)}>
+              onClick={() => setOpen(false)}
+            >
               <X width={14} height={14} />
             </div>
           </div>

@@ -20,7 +20,7 @@ export default function SingleStudentPage() {
       <div className="w-full xl:w-2/3">
         <div className="flex flex-col lg:flex-row gap-4">
           <Card className="bg-lamaSky py-6 px-4 rounded-md flex flex-1 gap-4">
-            <CardHeader className="w-1/3 flex-shrink-0">
+            <CardHeader className="w-1.5/3 flex-shrink-0">
               <Image
                 src="https://images.pexels.com/photos/2888150/pexels-photo-2888150.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 alt="Profile Picture"

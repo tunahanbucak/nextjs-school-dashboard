@@ -2,9 +2,8 @@ import TableSearch from "@/components/TableSearch";
 import { Button } from "@/components/ui/button";
 import React from "react";
 import { ArrowDownNarrowWide, SlidersHorizontal } from "lucide-react";
-import Table from "@/components/Table";
 import PaginationComponent from "@/components/Pagination";
-import { resultsData, role } from "@/lib/data";
+import { role } from "@/lib/data";
 import FormModal from "@/components/FormModal";
 import ResultsTable from "@/components/ResulsTable";
 
@@ -26,26 +25,6 @@ export default function page() {
           </div>
         </div>
       </div>
-      {/* <Table
-        info="Dersler"
-        data={resultsData}
-        IDName="Sınıf"
-        lessonName="Öğretmen"
-        className="Öğrenci"
-        number="Puan"
-        address="Tarih"
-        name="result"
-        renderActions={(item) => (
-          <>
-            {role === "admin" && (
-              <>
-                <FormModal table="result" type="update" data={item} />
-                <FormModal table="result" type="delete" id={item.id} />
-              </>
-            )}
-          </>
-        )}
-      /> */}
       <ResultsTable />
       <PaginationComponent totalItems={100} itemsPerPage={25} />
     </div>

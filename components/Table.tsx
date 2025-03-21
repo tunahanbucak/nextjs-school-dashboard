@@ -75,7 +75,10 @@ export default function TableComponent({
                 <div className="gap-4 flex items-center">
                   {(name === "teachers" || name === "students") && (
                     <Avatar className="w-10 h-10 md:hidden rounded-full object-cover xl:block">
-                      <AvatarImage src={item.photo} alt="User Profile" />
+                      <AvatarImage
+                        src={item.photo || "/noAvatar.png"}
+                        alt="User Profile"
+                      />
                     </Avatar>
                   )}
                   <div>
@@ -103,17 +106,18 @@ export default function TableComponent({
                   item.studentId ||
                   item.students ||
                   item.capacity ||
-                  item.class}
+                  item.class ||
+                  item.username}
               </TableCell>
               <TableCell className="hidden md:table-cell text-xs sm:text-sm p-4">
-                {item.subjects?.join(", ") ||
+                {item.subjects?.map((subject) => subject.name).join(", ") ||
                   item.grade ||
-                  item.teachers?.join(",") ||
+                  item.teachers?.join(", ") ||
                   item.teacher ||
                   item.startTime}
               </TableCell>
               <TableCell className="hidden md:table-cell text-xs sm:text-sm">
-                {item.classes?.join(", ") ||
+                {item.classes?.map((classItem) => classItem.name).join(", ") ||
                   item.className ||
                   item.supervisor ||
                   item.student ||

@@ -26,7 +26,7 @@ export default function ResultsTable() {
       number="Puan"
       address="Tarih"
       name="result"
-      renderActions={renderActions} // ✅ Artık fonksiyon burada geçiliyor
+      renderActions={renderActions}
     />
   );
 }

@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Bell,
-  Mail,
-  Search,
-  MessageCircleMore,
-  Navigation,
-} from "lucide-react";
-import { Input } from "./ui/input";
+import { Bell, Search, MessageCircleMore, Navigation } from "lucide-react";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { Avatar, AvatarImage, AvatarFallback } from "./ui/avatar";

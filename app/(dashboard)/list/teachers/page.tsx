@@ -1,16 +1,20 @@
-"use client";
-
 import TableSearch from "@/components/TableSearch";
 import { Button } from "@/components/ui/button";
 import React from "react";
-import { ArrowDownNarrowWide, Eye, SlidersHorizontal } from "lucide-react";
-import Table from "@/components/Table";
+import { ArrowDownNarrowWide, SlidersHorizontal } from "lucide-react";
 import PaginationComponent from "@/components/Pagination";
-import { role, teachersData } from "@/lib/data";
+import { role } from "@/lib/data";
 import FormModal from "@/components/FormModal";
-import Link from "next/link";
+import prisma from "@/lib/prisma";
+import TeacherTable from "@/components/TeacherTable";
 
-export default function page() {
+export default async function page() {
+  const teachers = await prisma.teacher.findMany({
+    include: {
+      subjects: true,
+      classes: true,
+    },
+  });
   return (
     <div className=" bg-white p-4 rounded-md flex-1 m-4 mt-0">
       <div className="flex items-center justify-between">
@@ -30,7 +34,7 @@ export default function page() {
           </div>
         </div>
       </div>
-      <Table
+      {/* <Table
         info="Bilgi"
         data={teachersData}
         IDName="Öğretmen ID"
@@ -51,7 +55,8 @@ export default function page() {
             )}
           </>
         )}
-      />
+      /> */}
+      <TeacherTable teachers={teachers} />
       <PaginationComponent totalItems={100} itemsPerPage={25} />
     </div>
   );

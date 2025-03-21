@@ -36,16 +36,16 @@ interface FormModalProps {
     | "announcement";
   type: "create" | "update" | "delete";
   data?: any;
-  id?: number;
+  id?: string;
 }
 
 export default function FormModal({ table, type, data, id }: FormModalProps) {
-  const size =
-    type === "create"
-      ? "w-10 h-10"
-      : type === "update"
-      ? "w-9 h-9"
-      : "w-10 h-10";
+  // const size =
+  //   type === "create"
+  //     ? "w-10 h-10"
+  //     : type === "update"
+  //     ? "w-9 h-9"
+  //     : "w-10 h-10";
   const bgColor =
     type === "create"
       ? "bg-lamaYellow"

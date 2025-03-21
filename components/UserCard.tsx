@@ -19,7 +19,8 @@ export default function UserCard({ title, background }: UserCardProps) {
         className={`relative ${background} shadow-md rounded-lg flex-1  max-w-xs`}
         style={{
           minWidth: "250px",
-        }}>
+        }}
+      >
         <CardHeader className="p-4 border-b border-gray-200">
           <div className="flex justify-between items-center">
             <span className="text-xs bg-white px-2 py-1 rounded-full text-green-600">

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import React from "react";
 
-const Home: React.FC = () => {
+export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-600 via-gray-400 to-gray-700 text-white">
       <header
@@ -23,9 +23,11 @@ const Home: React.FC = () => {
             Öğrencilerden öğretmenlere, sınav sonuçlarından sınıflara kadar her
             şey burada.
           </p>
-          <Button className="bg-indigo-600 hover:bg-indigo-700 px-6 py-3 text-lg font-medium shadow-xl rounded-full transform transition duration-300 hover:scale-105">
-            Başlayın
-          </Button>
+          <Link href="#management">
+            <Button className="bg-indigo-600 hover:bg-indigo-700 px-6 py-3 text-lg font-medium shadow-xl rounded-full transform transition duration-300 hover:scale-105">
+              Başlayın
+            </Button>
+          </Link>
         </div>
       </header>
       <section className="py-24 text-center bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-700">
@@ -48,7 +50,10 @@ const Home: React.FC = () => {
           <h2 className="text-5xl font-bold text-white mb-12 animate-fade-up">
             Yönetici Alanına Hoşgeldiniz
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            id="management"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
             <FeatureCard title="Yönetici" color="bg-indigo-500" link="/admin" />
             <FeatureCard title="Öğretmen" color="bg-teal-500" link="/teacher" />
             <FeatureCard title="Öğrenci" color="bg-green-500" link="/student" />
@@ -63,6 +68,4 @@ const Home: React.FC = () => {
       </footer>
     </div>
   );
-};
-
-export default Home;
+}

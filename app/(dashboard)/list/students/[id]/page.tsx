@@ -9,12 +9,6 @@ import Link from "next/link";
 import React from "react";
 
 export default function SingleStudentPage() {
-  const stats = [
-    { title: "90%", label: "Attendance", icon: "/singleAttendance.png" },
-    { title: "2", label: "Branches", icon: "/singleBranch.png" },
-    { title: "6", label: "Lessons", icon: "/singleLesson.png" },
-    { title: "6", label: "Classes", icon: "/singleClass.png" },
-  ];
   return (
     <div className="flex-1 p-4 flex flex-col gap-4 xl:flex-row">
       <div className="w-full xl:w-2/3">

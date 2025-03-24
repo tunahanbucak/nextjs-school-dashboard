@@ -84,7 +84,8 @@ export default function SingleTeacherPage() {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="bg-white p-4 rounded-md flex gap-4 w-full md:w-[48%] xl:w-[45%] 2xl:w-[48%] items-center">
+                className="bg-white p-4 rounded-md flex gap-4 w-full md:w-[48%] xl:w-[45%] 2xl:w-[48%] items-center"
+              >
                 <Image
                   src={stat.icon}
                   alt=""
@@ -114,7 +115,10 @@ export default function SingleTeacherPage() {
             <Link href="/" className="p-3 rounded-md bg-lamaSkyLight ">
               Öğretmen &apos;in Sınıfları
             </Link>
-            <Link href="/" className="p-3 rounded-md bg-lamaPurpleLight">
+            <Link
+              href={`/list/students?teacherId=${"teacher2"}`}
+              className="p-3 rounded-md bg-lamaPurpleLight"
+            >
               Öğretmen &apos;in Öğrencileri
             </Link>
             <Link href="/" className="p-3 rounded-md bg-lamaYellowLight">

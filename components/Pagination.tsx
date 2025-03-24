@@ -1,76 +1,65 @@
 "use client";
 
-import React, { useState } from "react";
-import { Button } from "./ui/button";
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-  PaginationLink,
-} from "./ui/pagination";
+import { ITEM_PER_PAGE } from "@/lib/settings";
+import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
-interface PaginationComponentProps {
-  totalItems: number;
-  itemsPerPage: number;
-}
+const Pagination = ({ page, count }: { page: number; count: number }) => {
+  const router = useRouter();
 
-const PaginationComponent: React.FC<PaginationComponentProps> = ({
-  totalItems,
-  itemsPerPage,
-}) => {
-  const [currentPage, setCurrentPage] = useState<number>(1);
-  const totalPages = Math.ceil(totalItems / itemsPerPage);
+  const hasPrev = ITEM_PER_PAGE * (page - 1) > 0;
+  const hasNext = ITEM_PER_PAGE * (page - 1) + ITEM_PER_PAGE < count;
 
-  const handlePrevious = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
-    }
-  };
-
-  const handleNext = () => {
-    if (currentPage < totalPages) {
-      setCurrentPage(currentPage + 1);
-    }
-  };
-
-  const handlePageClick = (page: number) => {
-    setCurrentPage(page);
+  const changePage = (newPage: number) => {
+    const params = new URLSearchParams(window.location.search);
+    params.set("page", newPage.toString());
+    router.push(`${window.location.pathname}?${params}`);
   };
 
   return (
-    <div className="p-4 flex flex-col md:flex-row items-center justify-center space-x-0 md:space-x-4 text-gray-500">
+    <div className="flex items-center justify-between p-4 text-gray-500">
       <Button
-        onClick={handlePrevious}
-        disabled={currentPage === 1}
-        className="bg-gray-200 px-4 py-2 rounded shadow disabled:opacity-50 transition-colors duration-200 hover:bg-gray-300">
-        Geri{" "}
+        variant="outline"
+        size="sm"
+        disabled={!hasPrev}
+        onClick={() => changePage(page - 1)}
+        className="py-2 px-4 rounded-md bg-slate-200 text-xs font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        Geri
       </Button>
-      <Pagination className="flex items-center my-2 md:my-0">
-        <PaginationContent className="flex items-center space-x-1">
-          {Array.from({ length: totalPages }, (_, index) => (
-            <PaginationItem key={index + 1}>
-              <PaginationLink
-                onClick={() => handlePageClick(index + 1)}
-                aria-current={currentPage === index + 1 ? "page" : undefined}
-                className={`flex items-center justify-center px-4 py-2 rounded transition-colors duration-200 ${
-                  currentPage === index + 1
-                    ? "bg-lamaSky text-white"
-                    : "hover:bg-gray-200"
-                }`}>
-                {index + 1}
-              </PaginationLink>
-            </PaginationItem>
-          ))}
-        </PaginationContent>
-      </Pagination>
+      <div className="flex items-center gap-2 text-sm">
+        {Array.from(
+          { length: Math.ceil(count / ITEM_PER_PAGE) },
+          (_, index) => {
+            const pageIndex = index + 1;
+            return (
+              <Button
+                key={pageIndex}
+                variant={page === pageIndex ? "default" : "outline"}
+                size="sm"
+                onClick={() => changePage(pageIndex)}
+                className={`px-2 rounded-sm ${
+                  page === pageIndex ? "bg-lamaSky" : ""
+                }`}
+              >
+                {pageIndex}
+              </Button>
+            );
+          }
+        )}
+      </div>
       <Button
-        onClick={handleNext}
-        disabled={currentPage === totalPages}
-        className="bg-gray-200 px-4 py-2 rounded shadow disabled:opacity-50 transition-colors duration-200 hover:bg-gray-300">
+        variant="outline"
+        size="sm"
+        disabled={!hasNext}
+        onClick={() => changePage(page + 1)}
+        className="py-2 px-4 rounded-md bg-slate-200 text-xs font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+      >
         İleri
       </Button>
     </div>
   );
 };
 
-export default PaginationComponent;
+export default Pagination;

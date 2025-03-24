@@ -36,7 +36,7 @@ interface FormModalProps {
     | "announcement";
   type: "create" | "update" | "delete";
   data?: any;
-  id?: string;
+  id?: string | number;
 }
 
 export default function FormModal({ table, type, data, id }: FormModalProps) {

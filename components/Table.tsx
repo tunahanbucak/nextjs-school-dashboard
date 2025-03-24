@@ -29,6 +29,16 @@ type TableProps = {
   renderActions?: (item: any) => React.ReactNode;
 };
 
+interface Subject {
+  name: string;
+  code: string;
+}
+
+interface ClassItem {
+  id: number;
+  name: string;
+}
+
 export default function TableComponent({
   data = [],
   IDName,
@@ -65,7 +75,7 @@ export default function TableComponent({
             <TableHead className="hidden md:table-cell font-bold">
               {address}
             </TableHead>
-            <TableHead className=" font-bold">Hareketler</TableHead>
+            <TableHead className="font-bold">Hareketler</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -87,7 +97,7 @@ export default function TableComponent({
                     </h1>
                     {name === "students" ? (
                       <h3 className="font-medium text-xs sm:text-sm">
-                        {item.class}
+                        {item.class?.name}
                       </h3>
                     ) : (
                       <h3 className="font-medium text-xs sm:text-sm">
@@ -106,18 +116,22 @@ export default function TableComponent({
                   item.studentId ||
                   item.students ||
                   item.capacity ||
-                  item.class ||
                   item.username}
               </TableCell>
               <TableCell className="hidden md:table-cell text-xs sm:text-sm p-4">
-                {item.subjects?.map((subject) => subject.name).join(", ") ||
+                {item.subjects
+                  ?.map((subject: Subject) => subject.name)
+                  .join(", ") ||
                   item.grade ||
                   item.teachers?.join(", ") ||
                   item.teacher ||
+                  item.class?.name[0] ||
                   item.startTime}
               </TableCell>
               <TableCell className="hidden md:table-cell text-xs sm:text-sm">
-                {item.classes?.map((classItem) => classItem.name).join(", ") ||
+                {item.classes
+                  ?.map((classItem: ClassItem) => classItem.name)
+                  .join(", ") ||
                   item.className ||
                   item.supervisor ||
                   item.student ||

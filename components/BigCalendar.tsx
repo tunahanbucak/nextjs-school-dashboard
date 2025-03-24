@@ -22,7 +22,7 @@ const messages = {
   date: "Tarih",
   time: "Saat",
   event: "Etkinlik",
-  work_week: "Çalışma Haftası",
+  work_week: "Hafta",
   showMore: (total: number) => `+${total} daha`,
 };
 
